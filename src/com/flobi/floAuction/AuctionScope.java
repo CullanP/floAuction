@@ -2,6 +2,7 @@ package com.flobi.floAuction;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -461,7 +462,7 @@ public class AuctionScope {
 	}
 
 	public static void sendWelcomeMessages() {
-		Player[] players = Bukkit.getOnlinePlayers();
+		Collection<? extends Player> players = Bukkit.getOnlinePlayers();
 		for (Player player : players) {
 			sendWelcomeMessage(player, false);
 		}

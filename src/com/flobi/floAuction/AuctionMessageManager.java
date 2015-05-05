@@ -3,6 +3,7 @@ package com.flobi.floAuction;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -175,7 +176,7 @@ public class AuctionMessageManager extends MessageManager {
      * @param auctionScope scope to send it to
      */
     private static void broadcastMessage(List<String> messages, AuctionScope auctionScope) {
-    	Player[] onlinePlayers = Bukkit.getOnlinePlayers();
+    	Collection<? extends Player> onlinePlayers = Bukkit.getOnlinePlayers();
     	
     	for (Player player : onlinePlayers) {
         	if (floAuction.getVoluntarilyDisabledUsers().contains(player.getName())) continue;
