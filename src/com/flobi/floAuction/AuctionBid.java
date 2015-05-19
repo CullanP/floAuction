@@ -51,7 +51,7 @@ public class AuctionBid {
 		AuctionBid currentBid = auction.getCurrentBid();
 		
 		for(int i = 0; i < auction.sealedBids.size(); i++) {
-			if (auction.sealedBids.get(i).getBidder().equalsIgnoreCase(this.getBidder())) {
+			if (auction.sealedBids.get(i).getBidder().equalsIgnoreCase(this.getBidder()) && auction.sealedBids.get(i) != auction.getCurrentBid()) {
 				previousSealedReserve += auction.sealedBids.get(i).getBidAmount();
 				auction.sealedBids.remove(i);
 				i--;
