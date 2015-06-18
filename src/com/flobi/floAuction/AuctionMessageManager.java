@@ -421,7 +421,7 @@ public class AuctionMessageManager extends MessageManager {
     	    	conditionals.put("2", player != null && floAuction.perms.has(player, "auction.start"));
     	    	conditionals.put("3", player != null && floAuction.perms.has(player, "auction.bid"));
     	    	conditionals.put("4", lot != null && lot.getEnchantments() != null && lot.getEnchantments().size() > 0);
-    	    	conditionals.put("5", lot != null && lot.getEnchantments() != null && lot.getEnchantments().size() > 0);
+    	    	conditionals.put("5", lot != null && lot.getItemMeta().getDisplayName() != null);
     	    	conditionals.put("6", auction != null && auction.sealed);
     	    	conditionals.put("7", auction != null && !auction.sealed && auction.getCurrentBid() != null);
     	    	conditionals.put("8", isBroadcast);
